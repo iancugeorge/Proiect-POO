@@ -23,6 +23,7 @@ public class Main {
         
         s.setZone(zone);
         System.out.println(s);
+        int x;
         
     }
     
