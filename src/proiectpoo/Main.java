@@ -1,5 +1,7 @@
 package proiectpoo;
 
+import java.util.Date;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -23,7 +25,12 @@ public class Main {
         
         s.setZone(zone);
         System.out.println(s);
-        int x;
+        
+        System.out.println("\n\n");
+        
+        Concert concert = new Concert("Concert Lady Gaga",new Date(),s);
+        
+        System.out.println(concert.toString());
         
     }
     
