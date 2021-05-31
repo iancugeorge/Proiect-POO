@@ -1,17 +1,25 @@
 package proiectpoo;
 
+import java.util.Vector;
+
 class Zona {
     int id;
     float pret;
-    Loc[] locuri;
+    Vector<Loc> locuri;
 
     public Zona(int id, float pret) {
         this.id = id;
         this.pret = pret;
     }
+    
+    public Zona(int id, float pret, Vector<Loc> locuri) {
+        this.id = id;
+        this.pret = pret;
+        this.locuri = locuri;
+    }
 
-    Zona() {
-        this.locuri = new Loc[0];
+    public Zona() {
+        this.locuri = null;
         this.id = 0;
         this.pret = 0;
     }
@@ -32,11 +40,11 @@ class Zona {
         this.pret = pret;
     }
 
-    public Loc[] getLocuri() {
+    public Vector<Loc> getLocuri() {
         return locuri;
     }
 
-    public void setLocuri(Loc[] locuri) {
+    public void setLocuri(Vector<Loc> locuri) {
         this.locuri = locuri;
     }
     

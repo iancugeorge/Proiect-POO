@@ -1,21 +1,29 @@
 package proiectpoo;
 
+import java.util.Vector;
+
 public class Sala {
     String denumire;
     int nrLocuri;
-    Zona[] zone;
+    Vector<Zona> zone = new Vector<Zona>(0);
     String adresa;
 
     public Sala() {
         this.denumire = "NEINITIALIZAT";
         this.nrLocuri = 0;
-        this.zone = new Zona[0];
         this.adresa = "NEINITIALIZAT";
     }
 
     public Sala(String denumire, String adresa) {
         this.denumire = denumire;
         this.adresa = adresa;
+    }
+    
+    public Sala(String denumire, String adresa, Vector<Zona> zone, int nrLocuri) {
+        this.denumire = denumire;
+        this.adresa = adresa;
+        this.zone = zone;
+        this.nrLocuri = nrLocuri;
     }
 
     public String getDenumire() {
@@ -34,11 +42,11 @@ public class Sala {
         this.nrLocuri = nrLocuri;
     }
 
-    public Zona[] getZone() {
+    public Vector<Zona> getZone() {
         return zone;
     }
 
-    public void setZone(Zona[] zone) {
+    public void setZone(Vector<Zona> zone) {
         this.zone = zone;
     }
 
