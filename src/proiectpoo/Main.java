@@ -32,6 +32,8 @@ public class Main {
         
         System.out.println(concert.toString());
         
+        Rezervare rez = new Rezervare(concert, s.getZone()[0].getLocuri());
+        System.out.println(rez);
     }
     
 }
