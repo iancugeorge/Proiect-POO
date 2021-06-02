@@ -63,7 +63,7 @@ public class Eveniment {
     public String toString() {
         return "Eveniment{" + "id=" + id + ", denumire=" + denumire + ", data=" + data + '}';
     }
-    
+    ///functie ce returneaza string cu toate zonele din sala
     public String printZone(){
         String out = "";
         for(Zona zona:this.sala.getZone()){
