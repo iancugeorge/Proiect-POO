@@ -5,7 +5,7 @@ import java.util.Vector;
 class Zona {
     int id;
     float pret;
-    Vector<Loc> locuri;
+    Vector<Loc> locuri = new Vector<>();
 
     public Zona(int id, float pret) {
         this.id = id;
@@ -48,7 +48,11 @@ class Zona {
         this.locuri = locuri;
     }
     
-
+    public String printIdPret(){
+        String out = "Zona{" + "id=" + id + ", pret=" + pret + "}\n";
+        return out;
+    }
+    
     @Override
     public String toString() {
         String out = "Zona{" + "id=" + id + ", pret=" + pret + "}\n";

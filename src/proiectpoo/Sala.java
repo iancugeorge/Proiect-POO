@@ -5,7 +5,7 @@ import java.util.Vector;
 public class Sala {
     String denumire;
     int nrLocuri;
-    Vector<Zona> zone = new Vector<Zona>(0);
+    Vector<Zona> zone = new Vector<>(0);
     String adresa;
 
     public Sala() {

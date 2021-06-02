@@ -14,7 +14,7 @@ import java.util.Date;
 public class PiesaTeatru extends Eveniment {
     private String regizor;
     private String autor;
-    private int durata;
+    private float durata;
     
     public PiesaTeatru()
     {
@@ -24,9 +24,9 @@ public class PiesaTeatru extends Eveniment {
         this.durata=0;
     }
     
-    public PiesaTeatru(String denumire, Date data, String regizor, String autor, int durata)
+    public PiesaTeatru(String denumire, Date data, Sala sala, String regizor, String autor, float durata)
     {
-        super(denumire, data);
+        super(denumire, data, sala);
         this.regizor=regizor;
         this.autor=autor;
         this.durata=durata;
@@ -48,11 +48,11 @@ public class PiesaTeatru extends Eveniment {
         this.autor = autor;
     }
 
-    public int getDurata() {
+    public float getDurata() {
         return durata;
     }
 
-    public void setDurata(int durata) {
+    public void setDurata(float durata) {
         this.durata = durata;
     }
     

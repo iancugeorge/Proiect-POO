@@ -1,11 +1,14 @@
 package proiectpoo;
 
+import java.util.Vector;
+
 public class Rezervare {
     Eveniment eveniment;
-    //Persoana persoana;
-    Loc[] locuri;
+    Persoana persoana;
+    Vector<Loc> locuri;
 
-    public Rezervare(Eveniment eveniment, Loc[] locuri) {
+    public Rezervare(Persoana persoana, Eveniment eveniment, Vector<Loc> locuri) {
+        this.persoana = persoana;
         this.eveniment = eveniment;
         this.locuri = locuri;
     }
@@ -18,11 +21,11 @@ public class Rezervare {
         this.eveniment = eveniment;
     }
 
-    public Loc[] getLocuri() {
+    public Vector<Loc> getLocuri() {
         return locuri;
     }
 
-    public void setLocuri(Loc[] locuri) {
+    public void setLocuri(Vector<Loc> locuri) {
         this.locuri = locuri;
     }
 

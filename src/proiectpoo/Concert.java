@@ -4,35 +4,22 @@ import java.util.Date;
 
 public class Concert extends Eveniment {
     
-    Sala sala;
-    
-    public Concert(String denumire, Date data) {
-        super(denumire, data);
-        this.sala = new Sala();
-    }
-    
+    String artist;
+        
     public Concert(String denumire, Date data, Sala sala) {
-        super(denumire, data);
-        this.sala = sala;
+        super(denumire, data, sala);
+        this.artist = artist;
     }
 
     Concert() {
         super();
-        this.sala = new Sala();
-    }
-
-    public Sala getSala() {
-        return sala;
-    }
-
-    public void setSala(Sala sala) {
-        this.sala = sala;
+        this.artist = "";
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Concert{sala=").append(sala);
+        sb.append("Concert{sala=").append(this.getSala());
         sb.append(super.toString());
         sb.append('}');
         return sb.toString();
